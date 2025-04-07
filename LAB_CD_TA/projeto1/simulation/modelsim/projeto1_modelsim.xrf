@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Usuario/Desktop/LAB_CD_TA/projeto1/projeto1.vhd
+source_file = 1, C:/Users/Usuario/Desktop/LAB_CD_TA/projeto1/db/projeto1.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = projeto1
+instance = comp, \A~I\, A, projeto1, 1
+instance = comp, \B~I\, B, projeto1, 1
+instance = comp, \X~0\, X~0, projeto1, 1
+instance = comp, \X~I\, X, projeto1, 1

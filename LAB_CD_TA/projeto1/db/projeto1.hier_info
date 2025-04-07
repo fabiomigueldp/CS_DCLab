@@ -1,0 +1,8 @@
+|projeto1
+A => X.IN0
+A => X.IN0
+B => X.IN1
+B => X.IN1
+X <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

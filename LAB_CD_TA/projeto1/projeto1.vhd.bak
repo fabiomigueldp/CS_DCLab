@@ -1,0 +1,9 @@
+entity projeto1 is
+	prot (
+			A	: in bit;
+			B	: in bit;
+			Carry	: out bit;
+			Soma : out bit
+			);
+			end entity somador;
+			
