@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Usuario\Desktop\LAB_CD_TA\somador_2bits\simulation\modelsim
+Esomador_2bits
+Z1 w1744662530
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Usuario\Desktop\LAB_CD_TA\somador_2bits\simulation\modelsim
+Z5 8C:/Users/Usuario/Desktop/LAB_CD_TA/somador_2bits/somador_2bits.vhd
+Z6 FC:/Users/Usuario/Desktop/LAB_CD_TA/somador_2bits/somador_2bits.vhd
+l0
+L7
+Vc>bPYOe9Ol`7:MMFTV=572
+!s100 EA^_@;<[:;;8?`6@E``T10
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1744663901.929000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Desktop/LAB_CD_TA/somador_2bits/somador_2bits.vhd|
+Z10 !s107 C:/Users/Usuario/Desktop/LAB_CD_TA/somador_2bits/somador_2bits.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Adataflow
+R2
+R3
+DEx4 work 13 somador_2bits 0 22 c>bPYOe9Ol`7:MMFTV=572
+l17
+L16
+VzE>SBHN1Yde;iZFh9cfX]1
+!s100 ^94oh`B8]Xc`:5G;bTQYF3
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12

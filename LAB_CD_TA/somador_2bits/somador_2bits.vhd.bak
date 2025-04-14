@@ -1,0 +1,48 @@
+-- Biblioteca padrão do VHDL
+LIBRARY IEEE;
+-- Uso do pacote para lógica digital padrão
+USE IEEE.STD_LOGIC_1164.ALL;
+-- Nota: Para operações aritméticas mais complexas ou vetoriais,
+-- você poderia adicionar: USE IEEE.NUMERIC_STD.ALL;
+-- Mas para esta implementação com portas lógicas, STD_LOGIC_1164 é suficiente.
+
+-- Definição da entidade, que é o bloco de entrada/saída
+ENTITY somador_2bits IS -- Renomeado para clareza (opcional)
+    PORT(
+        X1, X0 : IN STD_LOGIC;  -- Número X (X1 = MSB, X0 = LSB)
+        Y1, Y0 : IN STD_LOGIC;  -- Número Y (Y1 = MSB, Y0 = LSB)
+        S2, S1, S0 : OUT STD_LOGIC -- Soma S (S2 = MSB, S0 = LSB)
+    );
+END somador_2bits;
+
+-- Definição da arquitetura (comportamento do circuito)
+-- Usando um nome mais descritivo como 'dataflow' ou 'behavioral'
+ARCHITECTURE dataflow OF somador_2bits IS
+    -- Sinal interno para o carry (transporte) entre os bits 0 e 1 (opcional, mas bom para clareza)
+    SIGNAL C1 : STD_LOGIC;
+BEGIN
+    -- Lógica para o bit menos significativo da soma (S0)
+    -- S0 = X0 XOR Y0
+    S0 <= X0 XOR Y0;
+
+    -- Cálculo do carry (transporte) da coluna 0 para a coluna 1
+    -- C1 = X0 AND Y0
+    C1 <= X0 AND Y0;
+
+    -- Lógica para o segundo bit da soma (S1)
+    -- S1 = X1 XOR Y1 XOR C1
+    S1 <= X1 XOR Y1 XOR C1;
+
+    -- Lógica para o bit mais significativo da soma (S2 - que é o carry final)
+    -- S2 = (X1 AND Y1) OR (X1 AND C1) OR (Y1 AND C1)
+    S2 <= (X1 AND Y1) OR (X1 AND C1) OR (Y1 AND C1);
+
+    -- Alternativamente, sem usar o sinal C1 explícito (substituindo C1):
+    -- S0 <= X0 XOR Y0;
+    -- S1 <= X1 XOR Y1 XOR (X0 AND Y0);
+    -- S2 <= (X1 AND Y1) OR (X1 AND X0 AND Y0) OR (Y1 AND X0 AND Y0);
+    -- Ambas as formas dentro da arquitetura são válidas. A forma com C1
+    -- pode ser ligeiramente mais fácil de ler e mapear para a estrutura
+    -- de um somador completo (Full Adder).
+
+END dataflow;
