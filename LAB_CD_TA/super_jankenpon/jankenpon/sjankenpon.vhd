@@ -1,0 +1,1 @@
+library ieee;use ieee.std_logic_1164.all,ieee.numeric_std.all;entity E is port(i:in std_logic_vector(4downto0);o:out std_logic_vector(6downto0));end;architecture A of E is begin o<=x"00000000103CA4009207901E5240FFFFFFFFFFFFFFFFFFFFFFFFFFFF"(to_integer(unsigned(i))*7+6 downto to_integer(unsigned(i))*7);end;
