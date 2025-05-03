@@ -1,0 +1,57 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do somador_2bits_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Usuario/Desktop/LAB_CD_TA/somador_2bits/somador_2bits.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity somador_2bits
+# -- Compiling architecture dataflow of somador_2bits
+# 
+vsim work.somador_2bits
+# vsim work.somador_2bits 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.somador_2bits(dataflow)
+vsim -voptargs=+acc work.somador_2bits
+# vsim -voptargs=+acc work.somador_2bits 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.somador_2bits(dataflow)
+wave create -driver freeze -pattern clock -initialvalue U -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/somador_2bits/Y0
+# somador_2bits
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/somador_2bits/Y0
+# /somador_2bits/Y0 already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+vsim -voptargs=+acc work.somador_2bits(dataflow)
+# vsim -voptargs=+acc work.somador_2bits(dataflow) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.somador_2bits(dataflow)
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/somador_2bits/Y0
+# somador_2bits
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 200ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/somador_2bits/X0
+# somador_2bits
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 100ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/somador_2bits/Y1
+# somador_2bits
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 400ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/somador_2bits/X1
+# somador_2bits
+add wave -position 1 -format Logic -height 17 -editable 2 Edit:/somador_2bits/Y1
+add wave -position end  sim:/somador_2bits/S0
+add wave -position end  sim:/somador_2bits/S1
+add wave -position end  sim:/somador_2bits/S2
+run -all
