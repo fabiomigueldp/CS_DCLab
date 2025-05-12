@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Display7Seg4b is
+    port (
+        Bin4    : in  STD_LOGIC_VECTOR(3 downto 0);  -- número 0-15
+        SegU    : out STD_LOGIC_VECTOR(6 downto 0);  -- unidade
+        SegD    : out STD_LOGIC_VECTOR(6 downto 0)   -- dezena (0 ou 1)
+    );
+end entity;
+
+architecture RTL of Display7Seg4b is
+    signal units  : unsigned(3 downto 0);
+    signal tens   : unsigned(3 downto 0);
+begin
+    -- conversão simples 0-15 -> dezena/unidade
+    units <= unsigned(Bin4) mod 10;
+    tens  <= unsigned(Bin4) / 10;
+
+    with units select
+        SegU <= "0000001" when 0 | "1001111" when 1 | "0010010" when 2 |
+                "0000110" when 3 | "1001100" when 4 | "0100100" when 5 |
+                "0100000" when 6 | "0001111" when 7 | "0000000" when 8 |
+                "0000100" when 9 | "1111110" when others;  -- apagado
+
+    with tens select
+        SegD <= "0000001" when 0 | "1001111" when 1 | "1111110" when others;
+end architecture;

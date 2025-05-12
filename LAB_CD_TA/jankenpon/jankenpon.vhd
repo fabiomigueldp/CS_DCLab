@@ -43,7 +43,8 @@ BEGIN
 
     Y   <=  (A AND B) OR
             (A AND D) OR
-            (C AND D) OR
+            (C AND D) ORLIBRARY IEEE;                   -- Biblioteca padrão do VHDL
+USE IEEE.STD_LOGIC_1164.ALL;    -- Uso do pacote para lógica digital padrão
             (NOT A AND NOT B AND C) OR
             (B AND NOT C AND NOT D);
 
