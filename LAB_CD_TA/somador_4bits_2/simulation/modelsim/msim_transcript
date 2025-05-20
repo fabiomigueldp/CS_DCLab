@@ -1,0 +1,101 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Somador_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/FA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture dataflow of FA
+# vcom -93 -work work {C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/Somador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Somador
+# -- Compiling architecture dataflow of Somador
+# 
+vsim work.somador
+# vsim work.somador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.somador(dataflow)
+# Loading work.fa(dataflow)
+add wave -position end  sim:/somador/A
+force -freeze sim:/somador/A 1 0, 0 {50 ps} -r 100
+# Value length (1) does not equal array index length (4).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1 0, 0 {50 ps}.
+# 
+add wave -position end  sim:/somador/B
+force -freeze sim:/somador/B 1 0, 0 {50 ps} -r 100
+# Value length (1) does not equal array index length (4).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1 0, 0 {50 ps}.
+# 
+force -freeze sim:/somador/B(3) 1 0, 0 {50 ps} -r 100
+add wave -position insertpoint  \
+sim:/somador/A
+force -freeze sim:/somador/A 1 0, 0 {50 ps} -r 100
+# Value length (1) does not equal array index length (4).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1 0, 0 {50 ps}.
+# 
+run
+run
+run
+force -freeze sim:/somador/A(0) 1 0, 0 {50 ps} -r 100
+run
+run
+run -continue
+run -continue
+add wave -position end  sim:/somador/A(0)
+force -freeze sim:/somador/A(1) 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/somador/A(1)
+force -freeze sim:/somador/A(2) 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/somador/A(2)
+force -freeze sim:/somador/A(3) 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/somador/A(3)
+force -freeze sim:/somador/c(0) 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/somador/c(0)
+force -freeze sim:/somador/B(0) 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/somador/B(0)
+run
+run
+run
+run
+run
+force -freeze sim:/somador/A 1 0, 0 {50 ps} -r 100
+# Value length (1) does not equal array index length (4).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1 0, 0 {50 ps}.
+# 
+add wave -position end  sim:/somador/A
+run
+run
+run
+run -continue
+force -freeze sim:/somador/A(3) 1 0, 0 {50 ps} -r 100
+force -freeze sim:/somador/A(2) 1 0, 0 {50 ps} -r 100
+force -freeze sim:/somador/A(1) 1 0, 0 {50 ps} -r 100
+force -freeze sim:/somador/A(0) 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/somador/A(3)
+add wave -position end  sim:/somador/A(2)
+add wave -position end  sim:/somador/A(1)
+add wave -position end  sim:/somador/A(0)
+force -freeze sim:/somador/A 1 0, 0 {50 ps} -r 100
+# Value length (1) does not equal array index length (4).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1 0, 0 {50 ps}.
+# 

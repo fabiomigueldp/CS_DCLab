@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Usuario\Desktop\oipsjf\CS_DCLab\LAB_CD_TA\somador_4bits\simulation\modelsim
+Efa
+Z1 w1747769838
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Usuario\Desktop\oipsjf\CS_DCLab\LAB_CD_TA\somador_4bits\simulation\modelsim
+Z5 8C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/FA.vhd
+Z6 FC:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/FA.vhd
+l0
+L4
+VD?JIAj<jK6f<[BaV@HonI1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1747774502.959000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/FA.vhd|
+Z10 !s107 C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/FA.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 G6_clBf:G8CV<dYEz[k7A3
+!i10b 1
+Adataflow
+R2
+R3
+DEx4 work 2 fa 0 22 D?JIAj<jK6f<[BaV@HonI1
+l12
+L11
+VZYU[F_o9HMH6CddDNL2NB1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 i^nFJO330[knn>LMi@;1L1
+!i10b 1
+Esomador
+Z13 w1747774478
+R2
+R3
+R4
+Z14 8C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/Somador.vhd
+Z15 FC:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/Somador.vhd
+l0
+L4
+VbBf6chh2GYHVYZXU4CaVP3
+!s100 Gmhkbh7<g6X@?B0OIji1=2
+R7
+31
+!i10b 1
+Z16 !s108 1747774503.187000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/Somador.vhd|
+Z18 !s107 C:/Users/Usuario/Desktop/oipsjf/CS_DCLab/LAB_CD_TA/somador_4bits/Somador.vhd|
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 7 somador 0 22 bBf6chh2GYHVYZXU4CaVP3
+l33
+L13
+VR?>OE=FiKDjnmYB0@0TT<3
+!s100 ROL=nBGH9Ibh0o^5i9Tb00
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

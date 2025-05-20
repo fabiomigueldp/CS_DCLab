@@ -1,0 +1,61 @@
+LIBRARY IEEE;                   -- Biblioteca padrão do VHDL
+USE IEEE.STD_LOGIC_1164.ALL;    -- Uso do pacote para lógica digital padrão
+
+ENTITY Somador IS
+    PORT (
+        A, B    :   in  STD_LOGIC_VECTOR(3 DOWNTO 0);
+        Cout    :   out STD_LOGIC
+       -- SegU, SegUa, SegUb    :   out STD_LOGIC_VECTOR(0 TO 6);
+       -- SegD, SegDa, SegDb    :   out STD_LOGIC_VECTOR(0 TO 6)
+    );
+END Somador;
+
+ARCHITECTURE dataflow OF Somador IS
+
+    component FA
+        port ( A, B, Cin : in  STD_LOGIC;
+               S, Cout   : out STD_LOGIC );
+    end component;
+
+    component Display7Seg4b
+        port (
+            B4   : in  STD_LOGIC_VECTOR(3 DOWNTO 0);
+            SegU : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+            SegD : out STD_LOGIC_VECTOR(6 DOWNTO 0)
+        );
+    end component;
+
+    -- Sinal interno
+
+    SIGNAL c : STD_LOGIC_VECTOR(4 downto 0);
+    SIGNAL s_int : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+BEGIN
+
+    c(0) <= '0';
+
+    FA0 : FA port map (A(0), B(0), c(0), s_int(0), c(1));
+    FA1 : FA port map (A(1), B(1), c(1), s_int(1), c(2));
+    FA2 : FA port map (A(2), B(2), c(2), s_int(2), c(3));
+    FA3 : FA port map (A(3), B(3), c(3), s_int(3), c(4));
+
+    Cout <= c(4);
+
+--    Display : Display7Seg4b port map (
+--        B4   => s_int,
+--        SegU => SegU,
+--        SegD => SegD
+--    );
+--	 
+--	 DisplayA : Display7Seg4b port map (
+--	 B4 => A,
+--	 SegU => SegUa,
+--	 SegD => SegDa
+--	 );
+--	 
+--	 DisplayB : Display7Seg4b port map (
+--	 B4 => B,
+--	 SegU => SegUb,
+--	 SegD => SegDb
+--	 );
+END dataflow;

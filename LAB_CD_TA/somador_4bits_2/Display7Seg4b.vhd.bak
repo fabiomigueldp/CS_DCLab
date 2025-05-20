@@ -1,0 +1,35 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+use IEE.NUMERIC_STD.ALL;
+
+ENTITY Display7Seg4b IS
+    PORT (
+        B4      : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+        SegU    : out STD_LOGIC_VECTOR (6 DOWNTO 0);
+        SegD    : out STD_LOGIC_VECTOR (6 DOWNTO 0) 
+    )
+END ENTITY;
+
+ARCHITECTURE dataflow OF Display7Seg4b IS
+
+    -- Sinais internos
+
+    SIGNAL Un   :   unsigned(3 downto 0);
+    SIGNAL De   :   unsigned(3 downto 0);
+
+BEGIN 
+
+    -- Conversão 0-15 -> dezena/unidade
+
+    Un <= unsigned(B4) mod 10;
+    De <= unsigned(B4) / 10;
+
+    WITH Un SELECT
+        SegU <= "0000001" when 0 | "1001111" when 1 | "0010010" when 2 |
+                "0000110" when 3 | "1001100" when 4 | "0100100" when 5 |
+                "0100000" when 6 | "0001111" when 7 | "0000000" when 8 |
+                "0000100" when 9 | "1111110" when others;  -- apagado
+
+    WITH tens SELECT
+        SegD <= "0000001" when 0 | "1001111" when 1 | "1111110" when others;
+END ARCHITECTURE;
