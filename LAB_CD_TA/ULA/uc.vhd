@@ -31,7 +31,7 @@ BEGIN
     C0   <= ctrl(1) OR ctrl(2);                                   -- Carry-in para subtração
 
     -- Sinais de seleção do MUX (O1 O0: 00=arith, 01=OR, 10=AND, 11=XOR)
-    O0   <= ctrl(4);                                              -- OR
+    O0   <= ctrl(4) OR ctrl(6);                                   -- OR ou XOR
     O1   <= ctrl(5) OR ctrl(6);                                   -- AND ou XOR
 END decod;
 
